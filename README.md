@@ -20,3 +20,5 @@ sdk是把网络函数封装好, 可以是多语言版本的，python版本的，
 
 还有一种概念：api wrapper，api开发好以后，把api包装成wapper包，如python包，方便调用（例如binance-python）
 
+
+falsk 和 django  好像都不太合适做算法服务器开发
