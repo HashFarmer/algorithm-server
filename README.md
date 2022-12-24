@@ -17,3 +17,6 @@ sdk是把网络函数封装好, 可以是多语言版本的，python版本的，
 
 创建api的库Flask，创建的api可以返回json，也可以在浏览器返回html页面
 
+
+还有一种概念：api wrapper，api开发好以后，把api包装成wapper包，如python包，方便调用（例如binance-python）
+
