@@ -10,4 +10,7 @@ if __name__ == '__main__':
 
 # 1，浏览器
 # 2，curl -v http://127.0.0.1:5000/api
+# 3，用js或python的请求函数
+
+
  
