@@ -1,3 +1,7 @@
 binance api -> sdk(binance-python)
 
 ethereum rpc -> sdk(ethers.js)
+
+
+ethereum rpc的curl方式直接使用：
+https://ethereum.org/en/developers/docs/apis/json-rpc/
