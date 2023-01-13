@@ -3,3 +3,12 @@ https://ethereum.org/en/developers/docs/apis/json-rpc/
 
 
 https://ethereum.org/en/developers/docs/apis/javascript/
+
+
+
+ethers.js是对rpc api 的封装
+
+
+
+
+
