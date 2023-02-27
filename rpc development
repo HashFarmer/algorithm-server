@@ -1,0 +1,35 @@
+1、python
+
+# server program
+from jsonrpclib.SimpleJSONRPCServer import SimpleJSONRPCServer
+
+def findlen(*args):
+
+	res = []
+	for arg in args:
+		try:
+			lenval = len(arg)
+		except TypeError:
+			lenval = None
+		res.append((lenval, arg))
+	return res
+
+def main():
+	server = SimpleJSONRPCServer(('localhost', 1006))
+	server.register_function(findlen)
+	print("Start server")
+	server.serve_forever()
+if __name__ == '__main__':  
+    main()
+
+
+
+# Call by client
+from jsonrpclib import Server
+def main():
+    conn = Server('http://localhost:1006')
+    print(conn.findlen(('a','x','d','z'), 11, {'Mt. Abu': 1602, 'Mt. Nanda': 3001,'Mt. Kirubu': 102, 'Mt.Nish': 5710}))
+if __name__ == '__main__':
+    main()
+    
+    
