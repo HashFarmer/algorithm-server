@@ -1,0 +1,70 @@
+//
+import requests
+
+url = "https://eth.getblock.io/3eb35256-268f-4e74-9d68-5cec797630d5/mainnet/"
+headers = {"Content-Type": "application/json"}
+
+payload = {
+    "jsonrpc": "2.0",
+    "method": "eth_blockNumber",
+    "params": [],
+    "id": 1,
+}
+
+response = requests.post(url, headers=headers, json=payload)
+
+if response.status_code == 200:
+    result = response.json()["result"]
+    block_number = int(result, 16)
+    print(f"Current block number: {block_number}")
+else:
+    print(f"Error: {response.status_code} - {response.text}")
+
+//
+import requests
+
+url = "https://eth.getblock.io/3eb35256-268f-4e74-9d68-5cec797630d5/mainnet/"
+headers = {"Content-Type": "application/json"}
+
+payload = {
+    "jsonrpc": "2.0",
+    "method": "eth_getBalance",
+    "params": ["0x4E5B2e1dc63F6b91cb6Cd759936495434C7e972F", "latest"],
+    "id": 2,
+}
+
+response = requests.post(url, headers=headers, json=payload)
+
+if response.status_code == 200:
+    result = response.json()["result"]
+    balance = int(result, 16)
+    print(f"Balance: {balance} wei")
+else:
+    print(f"Error: {response.status_code} - {response.text}")
+
+//
+import requests
+
+url = "https://eth.getblock.io/3eb35256-268f-4e74-9d68-5cec797630d5/mainnet/"
+headers = {"Content-Type": "application/json"}
+
+payload = {
+    "jsonrpc": "2.0",
+    "method": "eth_sendTransaction",
+    "params": [
+        {
+            "from": "0x1234567890123456789012345678901234567890",
+            "to": "0x0987654321098765432109876543210987654321",
+            "value": "0x1234",
+        }
+    ],
+    "id": 3,
+}
+
+response = requests.post(url, headers=headers, json=payload)
+
+if response.status_code == 200:
+    result = response.json()["result"]
+    print(f"Transaction hash: {result}")
+else:
+    print(f"Error: {response.status_code} - {response.text}")
