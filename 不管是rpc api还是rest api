@@ -1,3 +1,6 @@
 rpc api 和 rest api 其实是不分语言
 
 都可以使用 curl 和 request库调用（js或python），然后封装成对应语言的sdk包，供相应的语言使用
+
+A语言开发的API，不管是rest的还是rpc的，都可以被另外一种语言调用。
+
