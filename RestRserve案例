@@ -1,0 +1,40 @@
+library(datasets)
+library("caret")
+library(dplyr)
+ 
+ir_data<- iris
+levels(ir_data$Species)
+x <- ir_data[,1:4] 
+y<-ir_data$Species
+ 
+fit.lda <- train(Species~., data=ir_data, method="lda")
+ 
+#save the model
+saveRDS(fit.lda, "./final_model.rds")
+
+
+library(RestRserve)
+library("caret")
+library(dplyr)
+library(jsonlite)
+ 
+#loading the model
+super_model <- readRDS("./final_model.rds")
+ 
+ 
+ 
+iris_predict=function(request, response){
+  x = fromJSON(rawToChar(request$body))
+  test <- data.frame("Sepal.Length" = x["Sepal.Length"], "Sepal.Width" = x["Sepal.Width"], "Petal.Length" = x["Petal.Length"],"Petal.Width"=x["Petal.Width"])
+  result<-predict(super_model, test)
+  response$body = result
+  response$content_type = "application/json"
+}
+ 
+ 
+ 
+app = RestRserve::Application$new()
+app$add_post(path = "/iris_predict", FUN = iris_predict)
+ 
+backend = BackendRserve$new()
+backend$start(app, 8080)
