@@ -1,3 +1,6 @@
+
+# 1
+
 library(datasets)
 library("caret")
 library(dplyr)
@@ -12,12 +15,13 @@ fit.lda <- train(Species~., data=ir_data, method="lda")
 #save the model
 saveRDS(fit.lda, "./final_model.rds")
 
-
+# 2
 library(RestRserve)
 library("caret")
 library(dplyr)
 library(jsonlite)
- 
+
+# 这个地方可以是model，可以是function
 #loading the model
 super_model <- readRDS("./final_model.rds")
  
@@ -26,7 +30,7 @@ super_model <- readRDS("./final_model.rds")
 iris_predict=function(request, response){
   x = fromJSON(rawToChar(request$body))
   test <- data.frame("Sepal.Length" = x["Sepal.Length"], "Sepal.Width" = x["Sepal.Width"], "Petal.Length" = x["Petal.Length"],"Petal.Width"=x["Petal.Width"])
-  result<-predict(super_model, test)
+  result<-predict(super_model, test) # predict函数哪里的？
   response$body = result
   response$content_type = "application/json"
 }
@@ -38,3 +42,7 @@ app$add_post(path = "/iris_predict", FUN = iris_predict)
  
 backend = BackendRserve$new()
 backend$start(app, 8080)
+
+
+# 3
+
