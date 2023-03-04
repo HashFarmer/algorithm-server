@@ -5,6 +5,8 @@ beakr、plumber、ambiorix、fiery
 
 RestRserve（侧重于api开发）, Rook(侧重于页面交互), opencpu, Rserve, jug
 
+httpuv
+
 请求库：httr，jsonlite
 https://statisticsglobe.com/api-in-r
 
