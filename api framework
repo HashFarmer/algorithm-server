@@ -11,6 +11,46 @@ httpuv
 https://statisticsglobe.com/api-in-r
 
 #
+Sure, here are some popular packages for API development in R:
+
+plumber: A package that allows you to expose R functions as API endpoints via HTTP.
+
+httr: A package that provides a set of functions for making HTTP requests and working with APIs.
+
+restfulr: A package that provides a simple and intuitive way to create RESTful APIs in R.
+
+opencpu: A package that provides an HTTP API for executing R functions and scripts.
+
+Rook: A package that provides a web server interface for R, which can be used to build APIs.
+
+jsonlite: A package that provides a fast and lightweight way to work with JSON data, which is commonly used for APIs.
+
+RCurl: A package that provides a set of functions for working with URLs and making HTTP requests.
+
+These packages can help you to create and interact with APIs in R, and each package has its own strengths and weaknesses depending on your use case.
+
+#
+Sure, here are some popular API development frameworks for R:
+
+Shiny: A web application framework for R, which can be used to develop interactive web applications and dashboards.
+
+plumber: A framework for creating APIs in R, which allows you to expose R functions as API endpoints via HTTP.
+
+OpenCPU: A system for embedded scientific computing and reproducible research, which provides an HTTP API for executing R functions and scripts.
+
+Rook: A web server interface for R, which can be used to build APIs.
+
+RestRserve: A framework for building RESTful APIs with R and the RServe package.
+
+These frameworks can help you to build robust and scalable APIs in R, and each framework has its own strengths and weaknesses depending on your use case.
+
+
+
+
+
+
+
+#
 Python：
 
 
