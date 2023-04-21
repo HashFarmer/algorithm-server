@@ -1,0 +1,59 @@
+
+
+The following are the most common types of parameters used in APIs:
+
+• Path Parameters
+• Query String Parameters
+• Header Parameters
+• Request Body Parameters
+
+1:
+Path Parameters
+
+They are included in the URL path of an endpoint.
+
+For example,
+
+/users/{name}/posts/{id}
+
+
+2:
+Query String Parameters
+
+Query parameters are widely used.
+
+They start with a question mark (?).
+
+There can be multiple query parameters in the endpoint which you can pass separately using the ampersand (&).
+
+For example,
+
+?name=john&id=1
+
+
+3:
+Header Parameters
+
+They are included in the header of the request.
+
+Generally, header parameters are used to pass sensitive data like API keys or credentials.
+
+
+4:
+Request Body Parameters
+
+Generally, request body parameters are shipped in a JSON Object in POST, PUT, or PATCH requests.
+
+The JSON object is included in the request body, so these parameters are called request body parameters.
+
+
+//
+https://rapidapi.com/guides/practices-api-parameters?utm_source=twitter.com%2FRapid_API&utm_medium=DevRel&utm_campaign=DevRel
+
+
+
+
+
+
+
+
